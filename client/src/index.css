@@ -1,0 +1,63 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+
+input.yellow-input {
+  border-bottom: 1px solid #fff!important;
+  box-shadow: 0 1px 0 0 #fff!important;
+}
+
+input.yellow-input + label {
+  color: #ffffff!important;
+}
+
+input.yellow-input:focus + label {
+  color: #ffffff!important;
+}
+
+input.yellow-input:focus {
+  border-bottom: 1px solid #c47119 !important;
+  box-shadow: 0 1px 0 0 #c47119 !important;
+}
+
+.menu{
+  display: flex;
+}
+
+.menu li{
+  width: 200px;
+  list-style: none;
+  background: #546e7a;
+  position: relative;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  transition: all .5s;
+}
+
+.menu a:hover {
+  background: #808291;
+}
+
+.menu ul {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: none;
+  padding: 0;
+}
+
+.menu li:hover > ul {
+  display: block;
+}
+
+.menu ul ul {
+  display: none;
+  top: 0;
+  left: 100%;
+}
