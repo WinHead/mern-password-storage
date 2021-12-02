@@ -1,3 +1,4 @@
+// Клиентские роуты
 import React from 'react'
 import {Switch, Route, Redirect} from 'react-router-dom'
 import {LinksPage} from './pages/LinksPage'

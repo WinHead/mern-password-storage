@@ -1,7 +1,5 @@
 import React from "react"
-
 export const InfoPage = () => {
-
     return (
         <div className="row">
             <div className="col s8 offset-s3" style={{paddingTop: '2rem'}}>

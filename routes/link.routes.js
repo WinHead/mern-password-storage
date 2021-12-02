@@ -1,6 +1,7 @@
 // Роутер для ссылки
 
 const {Router} = require('express')
+const bcrypt = require('bcryptjs')
 const config = require('config')
 const shortid = require('shortid')
 const Link = require('../models/Link')
@@ -67,9 +68,12 @@ router.post('/generate', auth, async (req, res) => {
       return res.json({ link: existing })
     }
 
+    // Хешируем пароль перед отправкой в БД
+    const hashedPassword = await bcrypt.hash(pswrd, 12)
+
     // Создаем новую ссылку
     const link = new Link({
-      code: code, name: name, pswrd: pswrd, from: from, owner: req.user.userId
+      code: code, name: name, pswrd: hashedPassword, from: from, owner: req.user.userId
     })
     //console.log(`создали ссылку: code: ${code}, name: ${name}, pswrd: ${pswrd}, from: ${from}, owner: ${req.user.userId}`)
 

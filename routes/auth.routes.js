@@ -114,7 +114,7 @@ router.post(
       { expiresIn: '1h' }    // Токен действует 1 час
     )
 
-    // Формиоуем ответ юзеру
+    // Формируем ответ юзеру
     res.json({ token, userId: user.id })
 
   } catch (e) {

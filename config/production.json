@@ -1,6 +1,0 @@
-{
-  "port": 5000,
-  "jwtSecret": "Vladimir MERN project",
-  "mongoUri": "mongodb+srv://vladimir:<password>@cluster0.0am9n.mongodb.net/app?retryWrites=true&w=majority",
-  "baseUrl": "http://localhost:5000"
-}
